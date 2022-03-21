@@ -5,13 +5,15 @@
 // ----------------------------------------------------------------------------------------------------------------------
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 // ----------------------------------------------------------------------------------------------------------------------
 
 int main()
 {
 
     int num_1, num_2, num_ans;
-    char today_date[11] = "2022-03-21", username[20];
+    char today_date[11] = "2022-03-21";
+
 
     printf("MATH MULTIPLY BOT 9000\n");
     printf("Today's Date Is: %s\n", today_date);
@@ -78,19 +80,36 @@ Notes:
 
         + Creating Varibales:
             + variabletype variablename[size if applicable] = intial variable value;
+            + In C you can intialize a varibale, declare a variable or both.
+            + int num_cars; INTIALIZATION
+            + num_cars = 10; DECLARATION
+            + int num_cars = 10; BOTH
 
         + Variable Types:
-            1   char[size in bytes]    Typically a single octet(one byte). It is an integer type.
-            2	int     The most natural size of integer for the machine.
-            3	float   A single-precision floating point value.
-            4	double  A double-precision floating point value.
-            5	void    Represents the absence of type.
+
+            Signed          +/-         (Splits range)
+            UnSigned        +           (no Split, Greater Range)
+
+            By default all data types are signed. Be careful!
+
+            char        | Single character                      | %c
+            char[]      | Arrays of characters - Strings        | %s
+            float       | 4 Bytes Of Mem, 6-7 Digits            | %f
+            double      | 8 Bytes Of Mem, 15-16 Digits          | %lf
+            bool        | 1 Byte Of Mem, true-false             | %d
+            int         | 4 Bytes Of Mem, -2Mil/+2Mil           | %d or %u
+            long long   | 8 Bytes Of Mem, -9Quint/+9Quint       | %lld or % llu
+
+
+            float   A single-precision floating point value.
+            double  A double-precision floating point value.
+            void    Represents the absence of type.
 
 
 
 
 Resources:
     + https://www.section.io/engineering-education/history-of-c-programming-language/
-    +
+    + https://www.youtube.com/watch?v=87SH2Cn0s9A
 */
 // ----------------------------------------------------------------------------------------------------------------------
