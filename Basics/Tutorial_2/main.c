@@ -9,13 +9,25 @@
 
 int main()
 {
-    int tutorial_num = 2;
-    char today_date[11] = "2022-03-21";
 
-    printf("Welcome To Tutorial #%d \nToday's Date Is: %s", tutorial_num, today_date);
+    int num_1, num_2, num_ans;
+    char today_date[11] = "2022-03-21", username[20];
+
+    printf("MATH MULTIPLY BOT 9000\n");
+    printf("Today's Date Is: %s\n", today_date);
+
+    printf("Number 1: ");
+    scanf("%i", &num_1);
+
+    printf("Number 2: ");
+    scanf("%i", &num_2);
+
+    num_ans = num_1 * num_2;
+
+    printf("\n...Crunching Numbers\n");
+    printf("Answer: %i", num_ans);
 
     return 0;
-
 }
 
 // ----------------------------------------------------------------------------------------------------------------------
@@ -42,26 +54,40 @@ Notes:
             \0	Null
 
         + C also allows for fairly robust string formatting with the printf() function
+            EXAMPLE: printf("the %s jumped over the %s, %d times", "cow", "moon", 2);
 
-        printf("the %s jumped over the %s, %d times", "cow", "moon", 2);
-%c	character
-%d	decimal (integer) number (base 10)
-%e	exponential floating-point number
-%f	floating-point number
-%i	integer (base 10)
-%o	octal number (base 8)
-%s	a string of characters
-%u	unsigned decimal (integer) number
-%x	number in hexadecimal (base 16)
-%%	print a percent sign
-\%	print a percent sign
+            %c	character
+            %d	decimal (integer) number (base 10)
+            %e	exponential floating-point number
+            %f	floating-point number
+            %i	integer (base 10)
+            %o	octal number (base 8)
+            %s	a string of characters
+            %u	unsigned decimal (integer) number
+            %x	number in hexadecimal (base 16)
+            %%	print a percent sign
+            \%	print a percent sign
+
+        + Use scanf("%s", &user_name); to write the users input into a predetermined variable
+
+    Variables:
+        + A variable is nothing but a name given to a storage area that our programs can manipulate.
+            Each variable in C has a specific type, which determines the size and layout of the variable's memory;
+            the range of values that can be stored within that memory; and the set of operations that can be
+            applied to the variable.
+
+        + Creating Varibales:
+            + variabletype variablename[size if applicable] = intial variable value;
+
+        + Variable Types:
+            1   char[size in bytes]    Typically a single octet(one byte). It is an integer type.
+            2	int     The most natural size of integer for the machine.
+            3	float   A single-precision floating point value.
+            4	double  A double-precision floating point value.
+            5	void    Represents the absence of type.
 
 
-    Programming
-        + #include <stdio.h>        Includes the standard input output library functions. The printf() function is defined in stdio.h .
-        + int main()                Main() function is the entry point of every program in C language. Kind of like if __name__ == "__main__" in Python
-        + printf()                  Printf() function is used to print data on the console.
-        + return 0                  return 0 statement, returns execution status to the OS. The 0 value is used for successful execution and 1 for unsuccessful execution.
+
 
 Resources:
     + https://www.section.io/engineering-education/history-of-c-programming-language/
