@@ -5,29 +5,50 @@
 // ----------------------------------------------------------------------------------------------------------------------
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
+#include <string.h>
 // ----------------------------------------------------------------------------------------------------------------------
 
 int main()
 {
 
+    // Define Needed Variables
+    const int VERSION = 1000;
     int num_1, num_2, num_ans;
     char today_date[11] = "2022-03-21";
+    char user_op[10];
 
 
-    printf("MATH MULTIPLY BOT 9000\n");
-    printf("Today's Date Is: %s\n", today_date);
+    // Basic Intro For User
+    printf("|-------------- CALCULATOR BOT 9000 ------------------|");
+    printf("\n                  Version: %d               ", VERSION);
+    printf("\n              Today's Date Is: %s", today_date);
 
-    printf("Number 1: ");
-    scanf("%i", &num_1);
+    // Ask User For Math Operator
+    printf("\n|-----------------------------------------------------|");
+    printf("\n Choose An Operator, Or Ask To Exit [+, -, /, *, EXIT] ");
+    printf("\n User Entry: ");
+    scanf("%s", &user_op);
 
-    printf("Number 2: ");
-    scanf("%i", &num_2);
+    // Use If, ElseIf, & Else To Navigate User Entry
+    if(strcmp(user_op, "+") == 0){
+        printf("\n User Entry: +");}
 
-    num_ans = num_1 * num_2;
+    else if(strcmp(user_op, "-") == 0){
+        printf("\n User Entry: -");}
 
-    printf("\n...Crunching Numbers\n");
-    printf("Answer: %i", num_ans);
+    else if(strcmp(user_op, "/") == 0){
+        printf("\n User Entry: /");}
+
+    else if(strcmp(user_op, "*") == 0){
+        printf("\n User Entry: *");}
+
+    else if(strcmp(user_op, "EXIT") == 0){
+        printf("\n User Entry: EXIT");}
+
+    else{
+        printf("\n Invalid Entry!");}
+
+
 
     return 0;
 }
@@ -78,7 +99,7 @@ Notes:
             the range of values that can be stored within that memory; and the set of operations that can be
             applied to the variable.
 
-        + Creating Varibales:
+        + Creating Variables:
             + variabletype variablename[size if applicable] = intial variable value;
             + In C you can intialize a varibale, declare a variable or both.
             + int num_cars; INTIALIZATION
@@ -104,6 +125,15 @@ Notes:
             float   A single-precision floating point value.
             double  A double-precision floating point value.
             void    Represents the absence of type.
+
+        + Constant Variables
+            + Sometimes you need to create, and use a variable that in a way that it will never
+                be altered. Constants (Literals) give programmers the ability to achieve this
+                type of functionality.
+
+            + There are two ways to define a constant variable
+                - Using #define preprocessor.
+                - Using const keyword.
 
 
 
