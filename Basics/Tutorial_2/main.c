@@ -13,42 +13,74 @@ int main()
 
     // Define Needed Variables
     const int VERSION = 1000;
-    int num_1, num_2, num_ans;
+    float num_1, num_2, num_ans;
     char today_date[11] = "2022-03-21";
     char user_op[10];
 
 
     // Basic Intro For User
-    printf("|-------------- CALCULATOR BOT 9000 ------------------|");
+    printf("-------------- CALCULATOR BOT 9000 ------------------");
     printf("\n                  Version: %d               ", VERSION);
     printf("\n              Today's Date Is: %s", today_date);
 
     // Ask User For Math Operator
-    printf("\n|-----------------------------------------------------|");
-    printf("\n Choose An Operator, Or Ask To Exit [+, -, /, *, EXIT] ");
-    printf("\n User Entry: ");
+    printf("\n-----------------------------------------------------");
+    printf("\nChoose An Operator, Or Ask To Exit [+, -, /, *, EXIT] ");
+    printf("\nUser Entry: ");
     scanf("%s", &user_op);
 
     // Use If, ElseIf, & Else To Navigate User Entry
     if(strcmp(user_op, "+") == 0){
-        printf("\n User Entry: +");}
+        printf("First Number: ");
+        scanf("%f", &num_1);
+
+        printf("Second Number: ");
+        scanf("%f", &num_2);
+
+        num_ans = num_1 + num_2;
+        printf("Answer: %.2f", num_ans);
+        }
 
     else if(strcmp(user_op, "-") == 0){
-        printf("\n User Entry: -");}
+        printf("First Number: ");
+        scanf("%f", &num_1);
+
+        printf("Second Number: ");
+        scanf("%f", &num_2);
+
+        num_ans = num_1 - num_2;
+        printf("Answer: %.2f", num_ans);
+        }
 
     else if(strcmp(user_op, "/") == 0){
-        printf("\n User Entry: /");}
+        printf("First Number: ");
+        scanf("%f", &num_1);
+
+        printf("Second Number: ");
+        scanf("%f", &num_2);
+
+        num_ans = num_1 / num_2;
+        printf("Answer: %.2f", num_ans);
+        }
 
     else if(strcmp(user_op, "*") == 0){
-        printf("\n User Entry: *");}
+        printf("First Number: ");
+        scanf("%f", &num_1);
+
+        printf("Second Number: ");
+        scanf("%f", &num_2);
+
+        num_ans = num_1 * num_2;
+        printf("Answer: %.2f", num_ans);
+        }
 
     else if(strcmp(user_op, "EXIT") == 0){
-        printf("\n User Entry: EXIT");}
+        printf("User Entry: EXIT");
+        }
 
     else{
-        printf("\n Invalid Entry!");}
-
-
+        printf("Invalid Entry!");
+        }
 
     return 0;
 }
